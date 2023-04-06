@@ -14,6 +14,9 @@ import { useQuery } from "react-query";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
+// import gpt css
+import "../../../disc/[slug]/_gpt_styles.css";
+
 const DiscFlow = ({ slug }) => {
   const [duplicateText, setDuplicateText] = useState("");
   const page = "0";
@@ -68,7 +71,7 @@ const DiscFlow = ({ slug }) => {
 
     Array.from(
       document.querySelectorAll(
-        ".chat-gpt-elmts-container .relative.flex span span"
+        ".chat-gpt-elmts-container .relative.flex.items-end span span"
       )
     ).forEach((item) => {
       item.insertAdjacentHTML("beforeend", image);
