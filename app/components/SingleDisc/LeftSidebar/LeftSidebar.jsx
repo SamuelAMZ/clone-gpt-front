@@ -41,7 +41,7 @@ const LeftSidebar = () => {
     }
 
     // redirect to login page after logout
-    router.push("/auth");
+    window.location.href = "/auth";
   };
 
   return (

@@ -120,9 +120,8 @@ const page = () => {
     if (user) {
       console.log(user);
       // redirect to dash
-      router.push(
-        "http://localhost:3000/disc/write-down-in-a-table%2C-the-name-of-the-first-5-us-president-1680623064380"
-      );
+      window.location.href =
+        "http://localhost:3000/disc/write-down-in-a-table%2C-the-name-of-the-first-5-us-president-1680623064380";
     }
   }, [user]);
 
