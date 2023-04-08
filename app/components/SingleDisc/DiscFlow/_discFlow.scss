@@ -84,3 +84,9 @@
 .chat-gpt-elmts-container .relative.flex span span {
   color: grey !important;
 }
+
+.clone-loading-screen {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 1.5rem;
+}

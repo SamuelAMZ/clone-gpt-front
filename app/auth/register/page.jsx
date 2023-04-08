@@ -121,7 +121,7 @@ const page = () => {
       console.log(user);
       // redirect to dash
       window.location.href =
-        "http://localhost:3000/disc/write-down-in-a-table%2C-the-name-of-the-first-5-us-president-1680623064380";
+        "http://localhost:3000/disc/643119b7087e7292142acc3b";
     }
   }, [user]);
 

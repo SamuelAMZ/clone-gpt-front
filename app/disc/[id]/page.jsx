@@ -1,5 +1,3 @@
-import React from "react";
-
 // components
 import RightSidebar from "@/app/components/SingleDisc/RightSidebar/RightSidebar";
 import LeftSidebar from "@/app/components/SingleDisc/LeftSidebar/LeftSidebar";
@@ -9,7 +7,7 @@ const page = ({ params }) => {
   return (
     <div className="single-disc-container">
       <LeftSidebar />
-      <DiscFlow slug={params.slug} />
+      <DiscFlow id={params.id} />
       {/* <RightSidebar /> */}
     </div>
   );

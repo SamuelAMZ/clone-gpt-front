@@ -156,7 +156,7 @@ const LeftSidebar = () => {
                 return (
                   <div key={elm._id} className="single-my-disc chat-bull">
                     <BsChatRightDots />
-                    <Link href={`disc/${elm?.slug}`}>
+                    <Link href={`disc/${elm?._id}`}>
                       <p>
                         {decodeURIComponent(elm?.slug)
                           .replaceAll("-", " ")

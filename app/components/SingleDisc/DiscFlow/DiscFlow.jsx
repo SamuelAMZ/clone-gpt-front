@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 // helpers
 import postReq from "../../../helpers/postReq";
@@ -15,10 +16,11 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 // import gpt css
-import "../../../disc/[slug]/_gpt_styles.css";
+import "../../../disc/[id]/_gpt_styles.css";
 
-const DiscFlow = ({ slug }) => {
+const DiscFlow = ({ id }) => {
   const [duplicateText, setDuplicateText] = useState("");
+  const [extensionPresent, setExtensionPresent] = useState(false);
   const page = "0";
   const perPage = "1000000";
 
@@ -29,7 +31,7 @@ const DiscFlow = ({ slug }) => {
     // send req
     return await postReq(
       {
-        slug: slug,
+        id: id,
         page: page,
         perPage: perPage,
       },
@@ -41,10 +43,20 @@ const DiscFlow = ({ slug }) => {
     data: shareData,
     isLoading: shareLoading,
     refetch: getShare,
-  } = useQuery([slug + "share"], handleLoadingShare, {
+  } = useQuery([id + "share"], handleLoadingShare, {
     refetchOnWindowFocus: false,
     enabled: true,
   });
+
+  // loader
+  const DiscLoadingScreen = () => {
+    return (
+      <div className="clone-loading-screen md:max-w-2xl lg:max-w-xl xl:max-w-3xl p-4 md:py-6 flex lg:px-0 m-auto">
+        <Skeleton height={50} width={50} count={1} circle={true} />
+        <Skeleton height={40} count={2} />
+      </div>
+    );
+  };
 
   // remove default gpt stuffs
   useEffect(() => {
@@ -78,15 +90,17 @@ const DiscFlow = ({ slug }) => {
     });
   }, [shareData]);
 
+  // overwriting the css dark mode of gpt tailwind
+  useEffect(() => {
+    localStorage.theme = "dark";
+  }, []);
+
   // seting duplicate text
   useEffect(() => {
-    console.log("lorem");
     if (shareData) {
-      console.log(shareData.payload.shares);
-
       const allItem = [];
 
-      shareData.payload.shares.forEach((item) => {
+      shareData?.payload?.shares?.forEach((item) => {
         allItem.push(item.textFormat);
       });
 
@@ -94,21 +108,23 @@ const DiscFlow = ({ slug }) => {
     }
   }, [shareData]);
 
-  // handle redirect to dupliacte url
-  const handleRedirectToDuplicateActionPage = () => {
-    let dateToComp = "";
-    const textToAdd = ["I asked you: ", "You said: "];
-    const bottomText =
-      "I want to ask more questions, do you undertand this context?";
+  //  handle check if extension in installe dor not
+  const handleCheckOfExt = (from) => {
+    const extensionNotifier = document.querySelector(
+      ".clonegpt-extension-present"
+    );
+    if (!extensionNotifier) {
+      if (from === "checkBtn") {
+        notif("CloneGPT chrome extension not installed");
+      }
+      return setExtensionPresent(false);
+    }
 
-    duplicateText.forEach((item, idx) => {
-      dateToComp = `${dateToComp} ${textToAdd[idx % 2]} ${item}`;
-    });
-
-    console.log(`https://chat.openai.com/chat?${dateToComp + bottomText}`);
-
-    router.push(`https://chat.openai.com/chat?${dateToComp + bottomText}`);
+    return setExtensionPresent(true);
   };
+  useEffect(() => {
+    handleCheckOfExt("not");
+  }, [shareData]);
 
   return (
     <div className="ipromt-disc-flow">
@@ -123,6 +139,12 @@ const DiscFlow = ({ slug }) => {
                 />
               );
             })}
+
+            {shareLoading && (
+              <SkeletonTheme baseColor="#8b8b8b35" highlightColor="#f9fafb">
+                {DiscLoadingScreen()}
+              </SkeletonTheme>
+            )}
           </div>
 
           <div className="iprompt-disc-controlers">
@@ -136,12 +158,26 @@ const DiscFlow = ({ slug }) => {
                   your own ChatGPT account to allow you to utilize the actual
                   context of the conversation.
                 </p>
-                <button
-                  className="btn btn-primary"
-                  onClick={handleRedirectToDuplicateActionPage}
-                >
-                  Duplicate
-                </button>
+                {extensionPresent ? (
+                  <a
+                    href={`https://chat.openai.com/chat?new-dup&${id}`}
+                    target="_blank"
+                  >
+                    <button
+                      className="btn btn-primary w-full"
+                      id="start-duplication"
+                    >
+                      Duplicate
+                    </button>
+                  </a>
+                ) : (
+                  <button
+                    className="btn btn-primary"
+                    onClick={() => handleCheckOfExt("checkBtn")}
+                  >
+                    Duplicate
+                  </button>
+                )}
               </div>
             </div>
           </div>
