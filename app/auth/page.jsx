@@ -22,7 +22,7 @@ import notif from "@/app/helpers/notif";
 // icons
 import { FcGoogle } from "react-icons/fc";
 
-const page = () => {
+const Auth = () => {
   const router = useRouter();
   const [userRegistrationData, setUserRegistrationData] = useState({
     email: "",
@@ -169,7 +169,7 @@ const page = () => {
 
         <div className="clone-more-options">
           <div>
-            Don't have an account?{"  "}
+            Do not have an account?{"  "}
             <p className="text-primary">
               <Link href="/auth/register">Register</Link>
             </p>
@@ -180,4 +180,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Auth;

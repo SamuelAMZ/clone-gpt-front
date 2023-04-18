@@ -16,7 +16,7 @@ import notif from "@/app/helpers/notif";
 // icons
 import { FcGoogle } from "react-icons/fc";
 
-const page = () => {
+const ForgetPassword = () => {
   const router = useRouter();
   const [userRegistrationData, setUserRegistrationData] = useState({
     email: "",
@@ -43,7 +43,7 @@ const page = () => {
       notif("reset email sent successfully");
       setOperationLoading(false);
 
-      // redirect to login page
+      // redirect to login ForgetPassword
       router.push("/auth");
     } catch (error) {
       console.log(error.message);
@@ -117,4 +117,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ForgetPassword;

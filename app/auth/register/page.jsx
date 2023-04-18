@@ -23,7 +23,7 @@ import notif from "@/app/helpers/notif";
 // icons
 import { FcGoogle } from "react-icons/fc";
 
-const page = () => {
+const Register = () => {
   const router = useRouter();
   const [userRegistrationData, setUserRegistrationData] = useState({
     name: "",
@@ -239,4 +239,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Register;
