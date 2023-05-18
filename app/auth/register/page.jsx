@@ -120,8 +120,7 @@ const Register = () => {
     if (user) {
       console.log(user);
       // redirect to dash
-      window.location.href =
-        "http://localhost:3000/disc/643119b7087e7292142acc3b";
+      window.location.href = `${process.env.NEXT_PUBLIC_CLIENT}/disc/643119b7087e7292142acc3b`;
     }
   }, [user]);
 
