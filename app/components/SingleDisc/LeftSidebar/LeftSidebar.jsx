@@ -62,34 +62,6 @@ const LeftSidebar = () => {
     );
   };
 
-  // handle disc histories
-  const setHistories = () => {
-    let actualHistory = getHistories();
-
-    // remove the 10th item everytime
-    if (actualHistory.length >= 10) {
-      for (let i = 0; i < actualHistory.length - 9; i++) {
-        actualHistory.shift();
-      }
-    }
-
-    if (actualHistory[actualHistory.length - 1] !== pathname) {
-      actualHistory.push(pathname);
-    }
-
-    localStorage.setItem("clone-history", JSON.stringify(actualHistory));
-  };
-
-  const getHistories = () => {
-    let actualHistory = localStorage.getItem("clone-history");
-    let actualHistoryArr = JSON.parse(actualHistory);
-    return actualHistoryArr?.length > 0 ? actualHistoryArr : [];
-  };
-
-  useEffect(() => {
-    setHistories();
-  }, []);
-
   const {
     data: userChatsData,
     isLoading: userChatsLoading,
@@ -98,6 +70,16 @@ const LeftSidebar = () => {
     refetchOnWindowFocus: false,
     enabled: true,
   });
+
+  const getHistories = () => {
+    let actualHistory = localStorage.getItem("clone-history");
+    let actualHistoryArr = JSON.parse(actualHistory);
+    return actualHistoryArr?.length > 0 ? actualHistoryArr : [];
+  };
+
+  useEffect(() => {
+    getHistories();
+  }, [pathname]);
 
   return (
     <div className="iprompt-disc-sidebar left-sidebar-container">

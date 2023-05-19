@@ -74,7 +74,7 @@ const DiscFlow = ({ id }) => {
     //   item.srcset = "";
     //   url = item.src =
     //     "https://chat.openai.com" +
-    //     item.src.replace("http://localhost:3000", "");
+    //     item.src.replace("https://iprompt.co", "");
     // });
 
     // const image = `<img src='${url}' />`;
@@ -124,6 +124,41 @@ const DiscFlow = ({ id }) => {
   };
   useEffect(() => {
     handleCheckOfExt("not");
+  }, [shareData]);
+
+  // handle disc histories
+  // get actual title
+  const getTitle = () => {
+    const firstBox = document
+      .querySelector(".chat-gpt-elmts-container")
+      .innerText.trim()
+      .replaceAll("\n", "")
+      .slice(0, 25);
+
+    return firstBox.length > 0 ? firstBox : false;
+  };
+
+  const setHistories = () => {
+    let actualHistory = localStorage.getItem("clone-history");
+    let actualHistoryArr = actualHistory ? JSON.parse(actualHistory) : [];
+
+    // remove the 10th item everytime
+    if (actualHistoryArr?.length >= 10) {
+      for (let i = 0; i < actualHistoryArr.length - 9; i++) {
+        actualHistoryArr.shift();
+      }
+    }
+
+    if (getTitle()) {
+      actualHistoryArr.push(getTitle());
+      localStorage.setItem("clone-history", JSON.stringify(actualHistoryArr));
+    }
+  };
+
+  useEffect(() => {
+    if (shareData) {
+      setHistories();
+    }
   }, [shareData]);
 
   return (
