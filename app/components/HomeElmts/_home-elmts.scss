@@ -127,6 +127,7 @@
       background-color: #588cfe;
       margin-top: -2rem;
       transition: all 0.1s ease-in;
+      border-radius: 10px 10px 0 10px;
     }
     &:nth-child(2) {
       background-color: #89f4b6;
@@ -135,11 +136,13 @@
       z-index: 3;
       border-left: 0;
       transition: all 0.1s ease-in;
+      border-radius: 10px 10px 0 0;
     }
     &:nth-child(3) {
       background-color: #fc804f;
       margin-top: -2rem;
       transition: all 0.1s ease-in;
+      border-radius: 10px 10px 10px 0;
     }
   }
 
@@ -308,8 +311,7 @@
 
 .kalami-review-wraper {
   background-color: #92fcbe;
-  padding: 10rem 0 10rem 0;
-  padding-bottom: calc(20rem);
+  padding: 10rem 0 20rem 0;
 
   .kalami-review {
     width: 1180px;
@@ -389,6 +391,7 @@
     justify-content: center;
     gap: 1.5rem;
     box-shadow: 20px 20px 0 0 #89f4b6;
+    border-radius: 10px;
 
     position: absolute;
     bottom: -50px;
