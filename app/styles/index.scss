@@ -1,6 +1,8 @@
 @import "./global/general", "./../page", "./../disc/[id]/page",
   "./../components/SingleDisc/LeftSidebar/leftSidebar",
   "./../components/SingleDisc/RightSidebar/rightSidebar",
-  "./../components/SingleDisc/DiscFlow/discFlow", "./../auth/page";
+  "./../components/SingleDisc/DiscFlow/discFlow", "./../auth/page",
+  "../components/General/Header/header", "../components/General/Footer/footer",
+  "../components/HomeElmts/home-elmts";
 
 // "./../disc/[slug]/gpt_styles",

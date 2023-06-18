@@ -1,11 +1,22 @@
-import { redirect } from "next/navigation";
+// components
+import Header from "./components/General/Header/Header";
+import Footer from "./components/General/Footer/Footer";
+import Hero from "./components/HomeElmts/Hero";
+import BigPoints from "./components/HomeElmts/BigPoints";
+import Grids from "./components/HomeElmts/Grids";
+import Review from "./components/HomeElmts/Review";
+import CallToAction from "./components/HomeElmts/CallToAction";
 
 export default function Home() {
-  redirect("/auth");
-
   return (
-    <main>
-      <p className="coming-soon">Coming Soon</p>
-    </main>
+    <>
+      <Header />
+      <Hero />
+      <BigPoints />
+      <Grids />
+      <Review />
+      <CallToAction />
+      <Footer />
+    </>
   );
 }

@@ -1,0 +1,64 @@
+.kalami-footer-wraper {
+  width: 1180px;
+  height: auto;
+  margin: 0 auto;
+  padding: 1.3rem 0;
+  padding-bottom: 5rem;
+  padding-top: 12rem;
+
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  gap: 5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  color: white !important;
+
+  .kalami-footer-elm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      padding-top: 1rem;
+    }
+
+    .kalami-footer-sub-elm {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      p {
+        color: white;
+        font-size: 15px;
+        line-height: 2;
+      }
+
+      .kalami-socials {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+
+        a {
+          font-size: 20px;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        line-height: 2;
+        li {
+          color: rgba(255, 255, 255, 0.619);
+        }
+      }
+    }
+  }
+
+  .kalami-logo {
+    height: 40px;
+    width: fit-content;
+  }
+}

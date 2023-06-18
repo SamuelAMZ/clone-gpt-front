@@ -1,0 +1,424 @@
+.btn-primary {
+  color: black !important;
+}
+
+.kalami-hero-wraper {
+  width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  gap: 1.5rem;
+  padding: 2.5rem 0;
+  padding-bottom: 12rem;
+
+  .kalami-hero-first {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    h1 {
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: white;
+
+      span {
+        background-color: #588cfe;
+        padding: 0 7px;
+        box-shadow: 5px 5px 0 0 #ffff00;
+        margin-right: 0.5rem;
+        border-radius: 5px;
+      }
+    }
+    p {
+      color: rgba(255, 255, 255, 0.619);
+      font-size: 17px;
+      line-height: 1.5;
+      width: 80%;
+    }
+    .kalami-btn-group {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+
+      button {
+        text-transform: none;
+        width: fit-content;
+        color: white;
+      }
+    }
+  }
+
+  .kalami-hero-second {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0;
+
+    .kalami-hero-layers {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -51%);
+      z-index: 1;
+      opacity: 0.8;
+
+      img {
+        height: 70vh;
+        width: auto;
+      }
+    }
+
+    .kalami-hero-video {
+      width: auto;
+      height: 340px;
+      z-index: 2;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.kalami-bigpoints-wraper {
+  background-color: white;
+  padding: 0 0 5rem 0;
+
+  .kalami-points {
+    width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .kalami-point {
+    border: 1px solid black;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    img {
+      width: 80px;
+      height: auto;
+    }
+
+    h3 {
+      color: black;
+      font-size: 23px;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    p {
+      text-align: center;
+      color: black;
+      font-size: 16px;
+    }
+
+    &:nth-child(1) {
+      background-color: #588cfe;
+      margin-top: -2rem;
+      transition: all 0.1s ease-in;
+    }
+    &:nth-child(2) {
+      background-color: #89f4b6;
+      margin-top: -4rem;
+      box-shadow: 15px 15px 0 0 #ffff00;
+      z-index: 3;
+      border-left: 0;
+      transition: all 0.1s ease-in;
+    }
+    &:nth-child(3) {
+      background-color: #fc804f;
+      margin-top: -2rem;
+      transition: all 0.1s ease-in;
+    }
+  }
+
+  .point3:hover {
+    margin-top: -4rem !important;
+    box-shadow: 15px 15px 0 0 yellow;
+    z-index: 3;
+    border-left: 0;
+    cursor: pointer;
+  }
+  .point2:hover {
+    margin-top: -4rem !important;
+    box-shadow: 15px 15px 0 0 yellow !important;
+    z-index: 3 !important;
+    border-left: 0 !important;
+    cursor: pointer;
+  }
+  .point1:hover {
+    margin-top: -4rem !important;
+    box-shadow: 15px 15px 0 0 yellow !important;
+    z-index: 4 !important;
+    cursor: pointer;
+  }
+
+  .kalami-point .point-layer {
+    position: absolute;
+  }
+  .point1 .point-layer {
+    top: -70px;
+    left: -70px;
+  }
+  .point3 .point-layer {
+    bottom: -90px;
+    right: -70px;
+  }
+}
+
+.kalami-points:hover .point2 {
+  margin-top: -2rem;
+  box-shadow: none;
+}
+
+.kalami-grids-wraper {
+  background-color: white;
+  padding: 5rem 0 10rem 0;
+
+  .kalami-grid-parent {
+    width: 1180px;
+    margin: 0 auto;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+    // layers start
+    .grid-layers {
+      width: 80px;
+      height: auto;
+
+      &:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: -50px;
+      }
+      &:nth-child(3) {
+        position: absolute;
+        top: 90px;
+        right: -50px;
+      }
+      &:nth-child(4) {
+        position: absolute;
+        top: 100%;
+        right: -50px;
+      }
+    }
+    // layers end
+
+    h3 {
+      font-size: 35px;
+      text-align: center;
+      color: black;
+      font-weight: 700;
+      width: 50%;
+      line-height: 1.4;
+      text-transform: capitalize;
+    }
+  }
+
+  .kalami-grids {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .kalami-grid {
+      border: 1px solid black;
+      padding: 3rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 60px;
+        height: auto;
+      }
+
+      h4 {
+        color: black;
+        font-size: 23px;
+        font-weight: 600;
+        text-transform: capitalize;
+        margin-top: 0.2rem;
+      }
+      p {
+        text-align: center;
+        color: black;
+        font-size: 16px;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(5) {
+        border-right: none;
+      }
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        border-bottom: none;
+      }
+    }
+
+    .kalami-grid {
+      cursor: pointer;
+      transition: all 0.1s ease-in;
+
+      &:nth-child(5) {
+        box-shadow: 10px 10px 0 0 #588cfe;
+        z-index: 3;
+      }
+    }
+
+    .gitem1:hover,
+    .gitem2:hover,
+    .gitem3:hover,
+    .gitem4:hover,
+    .gitem5:hover,
+    .gitem6:hover {
+      box-shadow: 10px 10px 0 0 #588cfe !important;
+      z-index: 4 !important;
+    }
+  }
+  .kalami-grids:hover .gitem5 {
+    box-shadow: none;
+  }
+}
+.gitem5 {
+  img {
+    width: 50px !important;
+  }
+}
+
+.kalami-review-wraper {
+  background-color: #92fcbe;
+  padding: 10rem 0 10rem 0;
+  padding-bottom: calc(20rem);
+
+  .kalami-review {
+    width: 1180px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    position: relative;
+
+    h3 {
+      font-size: 35px;
+      text-align: center;
+      color: #000;
+      font-weight: 700;
+      width: 50%;
+      line-height: 1.4;
+      text-transform: capitalize;
+    }
+
+    img {
+      width: 50px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      color: black;
+      font-weight: 500;
+      width: 60%;
+      line-height: 1.7;
+    }
+    h5 {
+      font-size: 18px;
+      color: black;
+      font-weight: 700;
+    }
+
+    // layers start
+    .review-layers {
+      width: 80px;
+      height: auto;
+
+      &:nth-child(5) {
+        position: absolute;
+        top: 0;
+        left: 40px;
+      }
+      &:nth-child(6) {
+        position: absolute;
+        top: 200px;
+        right: 0;
+      }
+    }
+    // layers end
+  }
+}
+
+.kalami-call-to-action-wraper {
+  background-color: #92fcbe;
+  padding: 0rem 0 0rem 0;
+  position: relative;
+
+  .kalami-call-to-action {
+    width: 900px;
+    margin: 0 auto;
+
+    background-color: #3474ff;
+    padding: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    box-shadow: 20px 20px 0 0 #89f4b6;
+
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    h3 {
+      font-size: 35px;
+      text-align: center;
+      color: #000;
+      font-weight: 700;
+      width: 50%;
+      line-height: 1;
+      text-transform: capitalize;
+    }
+
+    .kalami-call-to-action-btn {
+      display: flex;
+      gap: 1.5rem;
+
+      button {
+        text-transform: capitalize;
+        font-weight: 600;
+        font-size: 16px;
+
+        &:nth-child(2) {
+          background-color: #fc804f;
+          border-color: #fc804f;
+        }
+      }
+    }
+  }
+}
