@@ -17,12 +17,12 @@ const Footer = () => {
           </p>
           <ul className="kalami-socials">
             <li>
-              <Link href="#" target="_blank">
+              <Link href="/" target="_blank">
                 <FiTwitter />
               </Link>
             </li>
             <li>
-              <Link href="#" target="_blank">
+              <Link href="/" target="_blank">
                 <RxDiscordLogo />
               </Link>
             </li>
@@ -34,35 +34,16 @@ const Footer = () => {
         <div className="kalami-footer-sub-elm">
           <ul>
             <li>
-              <Link href="#">Lorem Ipsum</Link>
+              <Link href="/">Lorem Ipsum</Link>
             </li>
             <li>
-              <Link href="#">Lorem Ipsum</Link>
+              <Link href="/">Lorem Ipsum</Link>
             </li>
             <li>
-              <Link href="#">Lorem Ipsum</Link>
+              <Link href="/">Lorem Ipsum</Link>
             </li>
             <li>
-              <Link href="#">Lorem Ipsum</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="kalami-footer-elm">
-        <h3>Title</h3>
-        <div className="kalami-footer-sub-elm">
-          <ul>
-            <li>
-              <Link href="#">Lorem Ipsum</Link>
-            </li>
-            <li>
-              <Link href="#">Lorem Ipsum</Link>
-            </li>
-            <li>
-              <Link href="#">Lorem Ipsum</Link>
-            </li>
-            <li>
-              <Link href="#">Lorem Ipsum</Link>
+              <Link href="/">Lorem Ipsum</Link>
             </li>
           </ul>
         </div>
@@ -72,16 +53,35 @@ const Footer = () => {
         <div className="kalami-footer-sub-elm">
           <ul>
             <li>
-              <Link href="#">Lorem Ipsum</Link>
+              <Link href="/">Lorem Ipsum</Link>
             </li>
             <li>
-              <Link href="#">Lorem Ipsum</Link>
+              <Link href="/">Lorem Ipsum</Link>
             </li>
             <li>
-              <Link href="#">Lorem Ipsum</Link>
+              <Link href="/">Lorem Ipsum</Link>
             </li>
             <li>
-              <Link href="#">Lorem Ipsum</Link>
+              <Link href="/">Lorem Ipsum</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="kalami-footer-elm">
+        <h3>Title</h3>
+        <div className="kalami-footer-sub-elm">
+          <ul>
+            <li>
+              <Link href="/">Lorem Ipsum</Link>
+            </li>
+            <li>
+              <Link href="/">Lorem Ipsum</Link>
+            </li>
+            <li>
+              <Link href="/">Lorem Ipsum</Link>
+            </li>
+            <li>
+              <Link href="/">Lorem Ipsum</Link>
             </li>
           </ul>
         </div>

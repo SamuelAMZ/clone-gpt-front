@@ -16,17 +16,17 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="#" className="btn btn-ghost">
+            <Link href="/" className="btn btn-ghost">
               FAQs
             </Link>
           </li>
           <li>
-            <Link href="#" className="btn btn-ghost">
+            <Link href="/" className="btn btn-ghost">
               Roadmap
             </Link>
           </li>
           <li>
-            <Link href="#" className="btn btn-ghost">
+            <Link href="/" className="btn btn-ghost">
               Join Discord
             </Link>
           </li>
