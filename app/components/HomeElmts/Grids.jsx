@@ -49,7 +49,7 @@ const Grids = () => {
             {/* desc */}
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
           </div>
-          <div className="kalami-grid gitem6">
+          <div className="kalami-grid gitem6 n">
             {/* img */}
             <img src="/grid6.png" alt="" />
             {/* headline */}
