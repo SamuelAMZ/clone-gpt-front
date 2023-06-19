@@ -21,12 +21,12 @@
       font-weight: 700;
       line-height: 1.4;
       color: white;
-
+      word-wrap: break-word;
       span {
         background-color: #588cfe;
         padding: 0 7px;
         box-shadow: 5px 5px 0 0 #fec204;
-        margin-right: 0.5rem;
+        margin-right: 0.3rem;
         border-radius: 5px;
       }
     }

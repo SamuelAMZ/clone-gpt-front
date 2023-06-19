@@ -29,6 +29,11 @@
         a {
           font-size: 16px;
           text-transform: capitalize;
+
+          &:hover {
+            background-color: #fec204;
+            color: black;
+          }
         }
       }
     }

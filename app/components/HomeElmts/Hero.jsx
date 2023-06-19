@@ -6,14 +6,15 @@ const Hero = () => {
       {/* first part */}
       <div className="kalami-hero-first">
         <h1>
-          Manage all of your <span>daily task</span> at once Today{" "}
+          A.I With <span>More</span> Tokens, <span>Fewer</span> Hallucinations,
+          Entirely You.
         </h1>
         <p>
-          Is online invoicing software that helps you craft invoices, send
-          payment reminders, keep track. expenses.
+          Boost AI conversations with Kalami: fewer misunderstandings, more
+          tokens, your context added.
         </p>
         <div className="kalami-btn-group">
-          <button className="btn btn-primary">Get started</button>
+          <button className="btn btn-primary">Install now</button>
           <button className="btn btn-outline">How it works?</button>
         </div>
       </div>

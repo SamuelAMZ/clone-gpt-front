@@ -13,7 +13,7 @@ const Grids = () => {
             {/* img */}
             <img src="/grid1.png" alt="" />
             {/* headline */}
-            <h4>headline</h4>
+            <h4>PDF Files</h4>
             {/* desc */}
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
           </div>
@@ -21,7 +21,7 @@ const Grids = () => {
             {/* img */}
             <img src="/grid2.png" alt="" />
             {/* headline */}
-            <h4>headline</h4>
+            <h4>Copy And Paste Texts</h4>
             {/* desc */}
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
           </div>
@@ -29,7 +29,7 @@ const Grids = () => {
             {/* img */}
             <img src="/grid3.png" alt="" />
             {/* headline */}
-            <h4>headline</h4>
+            <h4>API Request Module</h4>
             {/* desc */}
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
           </div>
@@ -37,7 +37,7 @@ const Grids = () => {
             {/* img */}
             <img src="/grid4.png" alt="" />
             {/* headline */}
-            <h4>headline</h4>
+            <h4>External Site Module</h4>
             {/* desc */}
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
           </div>
@@ -45,7 +45,7 @@ const Grids = () => {
             {/* img */}
             <img src="/grid5.png" alt="" />
             {/* headline */}
-            <h4>headline</h4>
+            <h4>Google Drive Files</h4>
             {/* desc */}
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
           </div>
@@ -53,7 +53,7 @@ const Grids = () => {
             {/* img */}
             <img src="/grid6.png" alt="" />
             {/* headline */}
-            <h4>headline</h4>
+            <h4>Github Repos</h4>
             {/* desc */}
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
           </div>
