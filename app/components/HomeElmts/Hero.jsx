@@ -22,7 +22,7 @@ const Hero = () => {
         {/* video */}
         <div className="kalami-hero-video">
           <iframe
-            src="https://player.vimeo.com/video/761979074?h=a045efbd3d&color=ffff00&title=0&byline=0&portrait=0"
+            src="https://player.vimeo.com/video/761979074?h=a045efbd3d&color=fec204&title=0&byline=0&portrait=0"
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowfullscreen
@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
         {/* layers */}
         <div className="kalami-hero-layers">
-          <img src="video-layers.png" alt="video-layers" />
+          <img src="/video-layer.png" alt="video-layers" />
         </div>
       </div>
     </div>
