@@ -35,10 +35,10 @@ const Header = () => {
 
       {/* auth actions */}
       <div className="kalami-auth-actions">
-        <Link href="auth">
+        <Link href="/auth">
           <button className="btn btn-ghost">Log in</button>
         </Link>
-        <Link href="auth/register">
+        <Link href="/auth/register">
           <button className="btn btn-primary">Sign up</button>
         </Link>
       </div>
