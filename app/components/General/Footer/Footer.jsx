@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className="kalami-footer-wraper">
       <div className="kalami-footer-elm">
-        <img src="logo.png" alt="kalami-logo" className="kalami-logo" />
+        <img src="/logo.png" alt="kalami-logo" className="kalami-logo" />
         <div className="kalami-footer-sub-elm">
           <p>
             Lorem Ipsum ipsum dolor sit amet consectetur adipisicing elit.
