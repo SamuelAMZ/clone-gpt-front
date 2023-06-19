@@ -11,24 +11,24 @@ const Header = () => {
       <div className="kalami-menu-wraper">
         <ul>
           <li>
-            <a href="/" className="btn btn-ghost">
+            <Link href="/" className="btn btn-ghost">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="btn btn-ghost">
+            <Link href="#" className="btn btn-ghost">
               FAQs
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="btn btn-ghost">
+            <Link href="#" className="btn btn-ghost">
               Roadmap
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="btn btn-ghost">
+            <Link href="#" className="btn btn-ghost">
               Join Discord
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
