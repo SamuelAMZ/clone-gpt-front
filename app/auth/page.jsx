@@ -18,6 +18,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 // custom hooks
 import notif from "@/app/helpers/notif";
+import postReq from "../helpers/postReq";
 
 // icons
 import { FcGoogle } from "react-icons/fc";
@@ -35,6 +36,22 @@ const Auth = () => {
   const googleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
+
+      // send request to the server
+      const userData = {
+        uid: result.user.uid,
+        email: result.user.email,
+        name: result.user.displayName,
+      };
+      const serverAnswer = await postReq(userData, "/api/new-user");
+
+      if (serverAnswer.code === "bad") {
+        notif(serverAnswer.message);
+      }
+
+      if (serverAnswer.message === "ok") {
+        notif("log in successfully");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -80,13 +97,13 @@ const Auth = () => {
   };
 
   const [user, loading] = useAuthState(auth);
-  useEffect(() => {
-    if (user) {
-      console.log(user);
-      // redirect to dash
-      window.location.href = `${process.env.NEXT_PUBLIC_CLIENT}/disc/643119b7087e7292142acc3b`;
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user) {
+  //     console.log(user);
+  //     // redirect to dash
+  //     window.location.href = `${process.env.NEXT_PUBLIC_CLIENT}/disc/643119b7087e7292142acc3b`;
+  //   }
+  // }, [user]);
 
   return (
     <div className="clonegpt-login-container">
