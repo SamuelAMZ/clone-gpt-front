@@ -82,8 +82,6 @@ const Register = () => {
         userRegistrationData.password
       );
 
-      console.log(userCredential);
-
       // send request to the server
       const userData = {
         uid: userCredential.user.uid,
@@ -122,7 +120,7 @@ const Register = () => {
   useEffect(() => {
     if (user) {
       // redirect to dash
-      window.location.href = `${process.env.NEXT_PUBLIC_CLIENT}/disc/643119b7087e7292142acc3b`;
+      window.location.href = `${process.env.NEXT_PUBLIC_CLIENT}/how-it-works`;
     }
   }, [user]);
 
