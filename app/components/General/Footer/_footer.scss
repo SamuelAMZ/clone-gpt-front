@@ -1,5 +1,7 @@
+@use "../../../styles//global/breakpoints" as b;
+
 .kalami-footer-wraper {
-  width: 1180px;
+  width: 90%;
   height: auto;
   margin: 0 auto;
   padding: 1.3rem 0;
@@ -7,12 +9,18 @@
   padding-top: 12rem;
 
   display: grid;
-  grid-template-columns: 1.8fr 1fr 1fr 1fr;
-  gap: 5rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   align-items: flex-start;
   justify-content: space-between;
 
   color: white !important;
+
+  @include b.breakpoint("768") {
+    width: 1180px;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr;
+    gap: 5rem;
+  }
 
   .kalami-footer-elm {
     display: flex;
@@ -59,6 +67,11 @@
 
   .kalami-logo {
     height: 40px;
-    width: fit-content;
+    width: auto;
+
+    @include b.breakpoint("768") {
+      height: 40px;
+      width: fit-content;
+    }
   }
 }

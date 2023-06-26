@@ -5,7 +5,7 @@ const Grids = () => {
     <div className="kalami-grids-wraper">
       <div className="kalami-grid-parent">
         <h3>
-          Enhanced Data Formats We Can Handle <span>at Present</span>
+          File types we <span>support</span>
         </h3>
         <img className="grid-layers" src="/layer3.png" alt="" />
         <img className="grid-layers" src="/layer4.png" alt="" />
