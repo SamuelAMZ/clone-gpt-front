@@ -3,8 +3,10 @@
 .kalami-how-works {
   width: 90%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  //   display: flex;
+  //   flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
   justify-content: center;
   padding: 3rem 0 2.5rem 0;
@@ -15,8 +17,9 @@
 
   @include b.breakpoint("768") {
     width: 1180px;
-    padding: 3rem 0 2.5rem 0;
+    padding: 5rem 0 2.5rem 0;
     margin: 0 auto;
+    grid-template-columns: 1fr 2fr;
   }
 
   .thankyou {
@@ -27,13 +30,13 @@
     justify-content: center;
 
     img {
-      width: 200px;
+      width: 300px;
       height: auto;
     }
 
     h3 {
       color: white;
-      font-size: 23px;
+      font-size: 27px;
       font-weight: 600;
       text-transform: capitalize;
     }
@@ -41,7 +44,7 @@
       text-align: center;
       color: #e8e8e8bd;
       font-size: 17px;
-      width: 60%;
+      width: 80%;
 
       a {
         color: #588cfe;
@@ -55,10 +58,31 @@
   padding: 3rem;
   border-radius: 10px;
   box-shadow: 15px 15px 0 0 #fec204;
-  margin-bottom: 5rem;
+  //   margin-bottom: 5rem;
 
   .step {
     color: white;
     font-size: 18px !important;
+  }
+}
+
+.how-layer {
+  width: 80px;
+  height: auto;
+  position: absolute;
+
+  &.first {
+    bottom: 5rem;
+    left: 3rem;
+  }
+  &.sec {
+    bottom: 5rem;
+    right: 3rem;
+    width: 120px;
+  }
+  &.third {
+    top: 7rem;
+    left: 3rem;
+    width: 120px;
   }
 }

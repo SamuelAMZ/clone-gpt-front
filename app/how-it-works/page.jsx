@@ -44,6 +44,10 @@ const page = () => {
           </ul>
         </div>
       </div>
+
+      <img className="how-layer first" src="/layer1.png" alt="" />
+      <img className="how-layer sec" src="/layer3.png" alt="" />
+      <img className="how-layer third" src="/layer4.png" alt="" />
     </>
   );
 };
