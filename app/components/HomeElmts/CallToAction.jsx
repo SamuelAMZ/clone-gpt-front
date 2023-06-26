@@ -4,9 +4,9 @@ const CallToAction = () => {
   return (
     <div className="kalami-call-to-action-wraper">
       <div className="kalami-call-to-action">
-        <h3>Join Our AI Communities</h3>
+        <h3>Install Extension Now</h3>
         <div className="kalami-call-to-action-btn">
-          <button className="btn btn-primary">Join Discord</button>
+          <button className="btn btn-primary">Install</button>
           <button className="btn btn-primary">Join Telegram</button>
         </div>
       </div>

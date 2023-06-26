@@ -1,40 +1,78 @@
+@use "../../styles/global/breakpoints" as b;
+
 .btn-primary {
   color: black !important;
 }
 
 .kalami-hero-wraper {
-  width: 1180px;
+  width: 90%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 0.9fr 1fr;
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   padding: 2.5rem 0;
-  padding-bottom: 12rem;
+  padding-bottom: 14rem;
+
+  position: relative;
+
+  @include b.breakpoint("768") {
+    width: 1180px;
+    padding: 0 0 2.5rem 0;
+    margin: 0 auto;
+  }
 
   .kalami-hero-first {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+
+    @include b.breakpoint("768") {
+      width: 70%;
+      height: 75vh;
+    }
+
     h1 {
-      font-size: 50px;
-      font-weight: 700;
-      line-height: 1.4;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 1.6;
       color: white;
-      word-wrap: break-word;
+      text-align: center;
+
+      @include b.breakpoint("768") {
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+
       span {
         background-color: #588cfe;
         padding: 0 7px;
-        box-shadow: 5px 5px 0 0 #fec204;
+        box-shadow: 4px 4px 0 0 #fec204;
         margin-right: 0.3rem;
         border-radius: 5px;
+
+        @include b.breakpoint("768") {
+          box-shadow: 5px 5px 0 0 #fec204;
+        }
       }
     }
     p {
       color: rgba(255, 255, 255, 0.619);
-      font-size: 17px;
+      font-size: 16px;
       line-height: 1.5;
-      width: 80%;
+      width: 90%;
+      text-align: center;
+
+      @include b.breakpoint("768") {
+        font-size: 17px;
+        line-height: 1.5;
+        width: 70%;
+      }
     }
     .kalami-btn-group {
       display: flex;
@@ -82,6 +120,47 @@
       }
     }
   }
+
+  .hero-layers {
+    position: absolute;
+    z-index: 3;
+    width: 30px;
+    height: auto;
+
+    @include b.breakpoint("768") {
+      width: 80px;
+    }
+
+    &.first {
+      top: 2rem;
+      left: 1.5rem;
+
+      @include b.breakpoint("768") {
+        top: 5rem;
+        left: 1.5rem;
+      }
+    }
+    &.second {
+      bottom: 6rem;
+      left: 1.5rem;
+      width: 100px;
+
+      @include b.breakpoint("768") {
+        bottom: 10rem;
+        left: 1.5rem;
+        width: 120px;
+      }
+    }
+    &.third {
+      top: 7rem;
+      right: 1.5rem;
+      width: 120px;
+    }
+    &.fourth {
+      bottom: 10rem;
+      right: 1.5rem;
+    }
+  }
 }
 
 .kalami-bigpoints-wraper {
@@ -89,10 +168,17 @@
   padding: 0 0 5rem 0;
 
   .kalami-points {
-    width: 1180px;
+    width: 90%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 4.5rem;
+
+    @include b.breakpoint("768") {
+      width: 1180px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
   }
 
   .kalami-point {
@@ -124,22 +210,27 @@
     }
 
     &:nth-child(1) {
-      background-color: #588cfe;
+      background-color: #fc804f;
       margin-top: -2rem;
       transition: all 0.1s ease-in;
       border-radius: 10px 10px 0 10px;
     }
     &:nth-child(2) {
       background-color: #89f4b6;
-      margin-top: -4rem;
+      margin-top: -3rem;
       box-shadow: 15px 15px 0 0 #fec204;
       z-index: 3;
-      border-left: 0;
       transition: all 0.1s ease-in;
       border-radius: 10px 10px 0 0;
+
+      @include b.breakpoint("768") {
+        margin-top: -4rem;
+        border-left: 0;
+      }
     }
     &:nth-child(3) {
-      background-color: #fc804f;
+      background-color: #588cfe;
+
       margin-top: -2rem;
       transition: all 0.1s ease-in;
       border-radius: 10px 10px 10px 0;
@@ -187,19 +278,27 @@
 
 .kalami-grids-wraper {
   background-color: white;
-  padding: 5rem 0 10rem 0;
+  padding: 0rem 0 5rem 0;
+
+  @include b.breakpoint("768") {
+    padding: 5rem 0 10rem 0;
+  }
 
   .kalami-grid-parent {
-    width: 1180px;
+    width: 90%;
     margin: 0 auto;
-
     position: relative;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
+
+    @include b.breakpoint("768") {
+      width: 1180px;
+      gap: 3rem;
+    }
 
     // layers start
     .grid-layers {
@@ -208,8 +307,13 @@
 
       &:nth-child(2) {
         position: absolute;
-        top: 0;
+        top: -90px;
         left: -50px;
+
+        @include b.breakpoint("768") {
+          top: 0;
+          left: -50px;
+        }
       }
       &:nth-child(3) {
         position: absolute;
@@ -225,19 +329,40 @@
     // layers end
 
     h3 {
-      font-size: 35px;
+      font-size: 25px;
       text-align: center;
       color: black;
-      font-weight: 700;
-      width: 50%;
-      line-height: 1.4;
+      font-weight: 600;
+      width: 90%;
+      line-height: 1.6;
       text-transform: capitalize;
+
+      @include b.breakpoint("768") {
+        font-size: 35px;
+        font-weight: 700;
+        width: 50%;
+        line-height: 1.4;
+      }
+
+      span {
+        background-color: #3474ff;
+        box-shadow: 5px 5px 0 0 #fec204;
+        padding: 4px 7px;
+        border-radius: 5px;
+        color: white;
+      }
     }
   }
 
   .kalami-grids {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @include b.breakpoint("768") {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
 
     .kalami-grid {
       border: 1px solid black;
@@ -247,6 +372,20 @@
       gap: 1rem;
       align-items: center;
       justify-content: center;
+      position: relative;
+
+      span {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: #3474ff;
+        box-shadow: 5px 5px 0 0 #fec204;
+        padding: 4px 7px;
+        border-radius: 5px;
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+      }
 
       img {
         width: 60px;
@@ -270,12 +409,16 @@
       &:nth-child(2),
       &:nth-child(4),
       &:nth-child(5) {
-        border-right: none;
+        @include b.breakpoint("768") {
+          border-right: none;
+        }
       }
       &:nth-child(1),
       &:nth-child(2),
       &:nth-child(3) {
-        border-bottom: none;
+        @include b.breakpoint("768") {
+          border-bottom: none;
+        }
       }
     }
 
@@ -311,28 +454,35 @@
 
 .kalami-review-wraper {
   background-color: #92fcbe;
-  padding: 10rem 0 20rem 0;
+  padding: 5rem 0 20rem 0;
+
+  @include b.breakpoint("768") {
+    padding: 10rem 0 20rem 0;
+  }
 
   .kalami-review {
-    width: 1180px;
+    width: 90%;
     margin: 0 auto;
-
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 2rem;
-
     position: relative;
 
+    @include b.breakpoint("768") {
+      width: 1180px;
+    }
+
     h3 {
-      font-size: 35px;
-      text-align: center;
+      font-size: 30px;
       color: #000;
-      font-weight: 700;
-      width: 50%;
+      font-weight: 600;
       line-height: 1.4;
       text-transform: capitalize;
+
+      @include b.breakpoint("768") {
+        font-size: 35px;
+        font-weight: 700;
+      }
     }
 
     img {
@@ -340,17 +490,26 @@
     }
 
     p {
-      text-align: center;
-      font-size: 18px;
+      font-size: 16px;
       color: black;
       font-weight: 500;
-      width: 60%;
-      line-height: 1.7;
+      line-height: 1.5;
+
+      @include b.breakpoint("768") {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.7;
+      }
     }
     h5 {
-      font-size: 18px;
+      font-size: 15px;
       color: black;
-      font-weight: 700;
+      font-weight: 600;
+
+      @include b.breakpoint("768") {
+        font-size: 18px;
+        font-weight: 700;
+      }
     }
 
     // layers start
@@ -358,15 +517,20 @@
       width: 80px;
       height: auto;
 
+      &:nth-child(3) {
+        position: absolute;
+        top: -130px;
+        left: -50px;
+      }
+      &:nth-child(4) {
+        position: absolute;
+        top: 10px;
+        right: 30px;
+      }
       &:nth-child(5) {
         position: absolute;
-        top: 0;
-        left: 40px;
-      }
-      &:nth-child(6) {
-        position: absolute;
-        top: 200px;
-        right: 0;
+        bottom: -100px;
+        right: 30px;
       }
     }
     // layers end
@@ -379,7 +543,7 @@
   position: relative;
 
   .kalami-call-to-action {
-    width: 900px;
+    width: 90%;
     margin: 0 auto;
 
     background-color: #3474ff;
@@ -389,23 +553,34 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
-    box-shadow: 20px 20px 0 0 #89f4b6;
-    border-radius: 10px;
+    gap: 1rem;
+    box-shadow: 10px 10px 0 0 #fec204;
+    border-radius: 5px;
 
     position: absolute;
     bottom: -50px;
     left: 50%;
     transform: translate(-50%, 0);
 
+    @include b.breakpoint("768") {
+      width: 900px;
+      gap: 1.5rem;
+      box-shadow: 20px 20px 0 0 #fec204;
+      border-radius: 10px;
+    }
+
     h3 {
-      font-size: 35px;
+      font-size: 30px;
       text-align: center;
       color: #000;
       font-weight: 700;
       width: 60%;
       line-height: 1;
       text-transform: capitalize;
+
+      @include b.breakpoint("768") {
+        font-size: 35px;
+      }
     }
 
     .kalami-call-to-action-btn {
@@ -424,4 +599,77 @@
       }
     }
   }
+}
+
+.kalami-more {
+  background-color: #3474ff;
+  box-shadow: 5px 5px 0 0 #fec204;
+  padding: 4px 7px;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: end;
+}
+
+.kalami-questions-wraper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @include b.breakpoint("768") {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .kalami-questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .kalami-question-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      h4 {
+        font-size: 20px;
+        color: #000;
+        font-weight: 600;
+        line-height: 1.4;
+        text-transform: capitalize;
+
+        @include b.breakpoint("768") {
+          font-size: 25px;
+          font-weight: 600;
+        }
+      }
+      p {
+        font-size: 16px;
+        color: black;
+        font-weight: 500;
+        line-height: 1.7;
+      }
+    }
+  }
+}
+
+.kalami-faq-title {
+  margin-bottom: 0.8rem;
+
+  span {
+    background-color: #3474ff;
+    box-shadow: 5px 5px 0 0 #fec204;
+    padding: 4px 7px;
+    border-radius: 5px;
+    color: white;
+  }
+}
+.kalami-faq-desc {
+  width: 60%;
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }

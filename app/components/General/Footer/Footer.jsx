@@ -12,8 +12,8 @@ const Footer = () => {
         <img src="/logo.png" alt="kalami-logo" className="kalami-logo" />
         <div className="kalami-footer-sub-elm">
           <p>
-            Lorem Ipsum ipsum dolor sit amet consectetur adipisicing elit.
-            Aliquid, ur aatqueco nsectetatqueco nsectettque.
+            Boost AI conversations with Kalami: fewer misunderstandings, more
+            tokens, your context added.
           </p>
           <ul className="kalami-socials">
             <li>
@@ -30,58 +30,46 @@ const Footer = () => {
         </div>
       </div>
       <div className="kalami-footer-elm">
-        <h3>Title</h3>
+        <h3>Quick Links</h3>
         <div className="kalami-footer-sub-elm">
           <ul>
             <li>
-              <Link href="/">Lorem Ipsum</Link>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/">Lorem Ipsum</Link>
+              <Link href="/">Faqs</Link>
             </li>
             <li>
-              <Link href="/">Lorem Ipsum</Link>
-            </li>
-            <li>
-              <Link href="/">Lorem Ipsum</Link>
+              <Link href="/">Instructions</Link>
             </li>
           </ul>
         </div>
       </div>
       <div className="kalami-footer-elm">
-        <h3>Title</h3>
+        <h3>Account</h3>
         <div className="kalami-footer-sub-elm">
           <ul>
             <li>
-              <Link href="/">Lorem Ipsum</Link>
+              <Link href="/">Log In</Link>
             </li>
             <li>
-              <Link href="/">Lorem Ipsum</Link>
+              <Link href="/">Sign Up</Link>
             </li>
             <li>
-              <Link href="/">Lorem Ipsum</Link>
-            </li>
-            <li>
-              <Link href="/">Lorem Ipsum</Link>
+              <Link href="/">Forgot Password</Link>
             </li>
           </ul>
         </div>
       </div>
       <div className="kalami-footer-elm">
-        <h3>Title</h3>
+        <h3>Ressources</h3>
         <div className="kalami-footer-sub-elm">
           <ul>
             <li>
-              <Link href="/">Lorem Ipsum</Link>
+              <Link href="/">Download Chrome Extension</Link>
             </li>
             <li>
-              <Link href="/">Lorem Ipsum</Link>
-            </li>
-            <li>
-              <Link href="/">Lorem Ipsum</Link>
-            </li>
-            <li>
-              <Link href="/">Lorem Ipsum</Link>
+              <Link href="/">Feedback</Link>
             </li>
           </ul>
         </div>
