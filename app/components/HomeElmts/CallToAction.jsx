@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const CallToAction = () => {
   return (
@@ -6,8 +7,12 @@ const CallToAction = () => {
       <div className="kalami-call-to-action">
         <h3>Install Extension Now</h3>
         <div className="kalami-call-to-action-btn">
-          <button className="btn btn-primary">Install</button>
-          <button className="btn btn-primary">Join Telegram</button>
+          <Link href="https://drive.google.com/drive/folders/1iIBZwRG2Pjba5gkhmgf5VrzrOnVGkhDL?usp=sharing">
+            <button className="btn btn-primary">
+              Install Chrome Extension
+            </button>{" "}
+          </Link>
+          <button className="btn btn-primary">Join Discord (soon) </button>
         </div>
       </div>
     </div>

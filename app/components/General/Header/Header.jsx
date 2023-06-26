@@ -32,7 +32,10 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/" className="btn btn-ghost">
+            <Link
+              href="https://drive.google.com/drive/folders/1iIBZwRG2Pjba5gkhmgf5VrzrOnVGkhDL?usp=sharing"
+              className="btn btn-ghost"
+            >
               Install Now
             </Link>
           </li>

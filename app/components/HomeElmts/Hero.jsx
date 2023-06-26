@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -14,8 +15,14 @@ const Hero = () => {
           tokens, your context added.
         </p>
         <div className="kalami-btn-group">
-          <button className="btn btn-primary">Install Chrome Extension</button>
-          <button className="btn btn-outline">How it works?</button>
+          <Link href="https://drive.google.com/drive/folders/1iIBZwRG2Pjba5gkhmgf5VrzrOnVGkhDL?usp=sharing">
+            <button className="btn btn-primary">
+              Install Chrome Extension
+            </button>{" "}
+          </Link>
+          <Link href="/how-it-works">
+            <button className="btn btn-outline">How it works?</button>
+          </Link>
         </div>
       </div>
       {/* second part */}
