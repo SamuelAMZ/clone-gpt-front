@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 // components
 import Header from "../components/General/Header/Header";
@@ -14,8 +15,11 @@ const page = () => {
           <img src="/thank.png" alt="" />
           <h3>Thank you!</h3>
           <p>
-            Thank you for installing our Kalami extension, here are some simple
-            to follow to get it work
+            Get started by installing our Chrome extension via this drive link:
+            <Link href="https://drive.google.com/drive/folders/1iIBZwRG2Pjba5gkhmgf5VrzrOnVGkhDL?usp=sharing">
+              {" "}
+              Here
+            </Link>
           </p>
         </div>
 
@@ -25,9 +29,9 @@ const page = () => {
             <li className="step step-primary">
               Installing our Chrome extension
             </li>
-            <li className="step">
-              Open up a ChatGPT window on (website link).
-            </li>
+            <Link href="https://chat.openai.com/" className="step">
+              Open up a ChatGPT window on chat.openai.com
+            </Link>
             <li className="step">
               Click on the new icon appearing in the middle-right of your
               screen.
