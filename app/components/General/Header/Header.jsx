@@ -3,10 +3,34 @@
 import React from "react";
 import Link from "next/link";
 
+// firebase
+import { signOut } from "firebase/auth";
+import { auth } from "../../../../utils/firebase";
+
+// react firebase hooks
+import { useAuthState } from "react-firebase-hooks/auth";
+
 // icons
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 const Header = () => {
+  // keep track of the user instance
+  const [user, loading] = useAuthState(auth);
+
+  // Function to handle user logout
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      notif("successfully logged out");
+    } catch (error) {
+      console.error(error);
+      return;
+    }
+
+    // redirect to login page after logout
+    window.location.href = "/auth";
+  };
+
   return (
     <div className="kalami-header-wraper">
       {/* logo */}
@@ -46,12 +70,20 @@ const Header = () => {
 
       {/* auth actions */}
       <div className="kalami-auth-actions hidden md:flex">
-        <Link href="/auth">
-          <button className="btn btn-ghost">Log in</button>
-        </Link>
-        <Link href="/auth/register">
-          <button className="btn btn-primary">Sign up</button>
-        </Link>
+        {user ? (
+          <button onClick={handleLogout} className="btn btn-ghost">
+            Log out
+          </button>
+        ) : (
+          <>
+            <Link href="/auth">
+              <button className="btn btn-ghost">Log in</button>
+            </Link>
+            <Link href="/auth/register">
+              <button className="btn btn-primary">Sign up</button>
+            </Link>
+          </>
+        )}
       </div>
 
       {/* menu icon */}
