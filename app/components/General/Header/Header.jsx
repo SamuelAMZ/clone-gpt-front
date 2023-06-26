@@ -10,7 +10,9 @@ const Header = () => {
   return (
     <div className="kalami-header-wraper">
       {/* logo */}
-      <img className="kalami-logo" src="/logo.png" alt="kalami-logo" />
+      <Link href="/">
+        <img className="kalami-logo" src="/logo.png" alt="kalami-logo" />
+      </Link>
 
       {/* menu */}
       <div className="kalami-menu-wraper hidden md:block">
