@@ -99,9 +99,8 @@ const Auth = () => {
   const [user, loading] = useAuthState(auth);
   useEffect(() => {
     if (user) {
-      console.log(user);
       // redirect to dash
-      window.location.href = `${process.env.NEXT_PUBLIC_CLIENT}/disc/643119b7087e7292142acc3b`;
+      window.location.href = `${process.env.NEXT_PUBLIC_CLIENT}/how-it-works`;
     }
   }, [user]);
 
