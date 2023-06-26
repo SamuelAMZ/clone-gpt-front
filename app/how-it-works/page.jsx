@@ -41,7 +41,6 @@ const page = () => {
               Click 'Kalami' on the bottom right, and begin asking the AI about
               your data.
             </li>
-            <li className="step">Upload any file type we support.</li>
           </ul>
         </div>
       </div>
