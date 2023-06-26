@@ -50,7 +50,10 @@ const Grids = () => {
             {/* headline */}
             <h4>API Request Module</h4>
             {/* desc */}
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            <p>
+              Configure API calls to pull data for dynamic context. Kalami
+              leverages it in your chats
+            </p>
             <span>Coming Soon</span>
           </div>
           <div className="kalami-grid gitem5">
@@ -59,7 +62,10 @@ const Grids = () => {
             {/* headline */}
             <h4>Github Repos</h4>
             {/* desc */}
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            <p>
+              Import your Github repository content directly to enhance the
+              context of your conversation
+            </p>
             <span>Coming Soon</span>
           </div>
           <div className="kalami-grid gitem6">
@@ -68,7 +74,10 @@ const Grids = () => {
             {/* headline */}
             <h4>Google Drive Files</h4>
             {/* desc */}
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            <p>
+              Upload any supported document from your Google Drive. Kalami makes
+              it part of the dialogue
+            </p>
             <span>Coming Soon</span>
           </div>
         </div>
