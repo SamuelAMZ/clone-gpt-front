@@ -47,8 +47,14 @@
 }
 
 .kalami-how-steps {
+  background-color: #588cfe;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 15px 15px 0 0 #fec204;
+  margin-bottom: 5rem;
+
   .step {
-    color: #e8e8e8bd;
+    color: white;
     font-size: 18px !important;
   }
 }
