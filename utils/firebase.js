@@ -4,12 +4,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDnylKC95pfmhVNuHGKbwmA3REkvb5SyUY",
-  authDomain: "clonegpt-fe34c.firebaseapp.com",
-  projectId: "clonegpt-fe34c",
-  storageBucket: "clonegpt-fe34c.appspot.com",
-  messagingSenderId: "236509212846",
-  appId: "1:236509212846:web:01d61d262bc9756f35fd3f",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_APIKEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTHDOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECTID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGE_BUCKET,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APPID,
 };
 
 // Initialize Firebase
