@@ -1,7 +1,9 @@
-@import "./global/general", "./../disc/[id]/page",
-  "./../components/SingleDisc/LeftSidebar/leftSidebar",
-  "./../components/SingleDisc/RightSidebar/rightSidebar",
-  "./../components/SingleDisc/DiscFlow/discFlow", "./../auth/page",
+@import "./global/general", 
+  // "./../disc/[id]/page",
+  // "./../components/SingleDisc/LeftSidebar/leftSidebar",
+  // "./../components/SingleDisc/RightSidebar/rightSidebar",
+  // "./../components/SingleDisc/DiscFlow/discFlow", 
+  "./../auth/page",
   "../components/General/Header/header", "../components/General/Footer/footer",
   "../components/HomeElmts/home-elmts", "../how-it-works/how-it-works";
 

@@ -1,6 +1,8 @@
 $breakpoint-n: (
   "768": 768px,
   "1000": 1000px,
+  "1440": 1000px,
+  "1680": 1000px,
 );
 
 @mixin breakpoint($size) {

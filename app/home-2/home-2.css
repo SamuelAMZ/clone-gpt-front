@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+.home-2 {
+  background-color: #f9f6ff;
+}
+.home-2 .video-container {
+  width: 490px;
+  height: 340px;
+  background: #fff;
+  border: 1px solid #6e43ef;
+}
+.d-flex {
+  display: flex;
+}
+/* header start */
+.home-2 .home2-kalami-header-wraper {
+  padding: 23px 0px 0px 0px;
+  height: 67px;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.logo-menu-container {
+  display: flex;
+  margin-right: 350px;
+}
+.home-2 .home2-kalami-header-wraper .logo-menu-container .kalami-logo {
+  width: 35px;
+  height: 44px;
+  margin-right: 80px;
+}
+.home-2
+  .home2-kalami-header-wraper
+  .logo-menu-container
+  .kalami-menu-wraper
+  ul {
+  display: flex;
+  flex-direction: row;
+  gap: 0rem;
+  align-items: center;
+}
+.home-2
+  .home2-kalami-header-wraper
+  .logo-menu-container
+  .kalami-menu-wraper
+  ul
+  li
+  a {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.home-2
+  .home2-kalami-header-wraper
+  .logo-menu-container
+  .kalami-menu-wraper
+  ul
+  li
+  a:hover {
+  color: black;
+}
+.home-2 .home2-kalami-header-wraper .kalami-auth-actions {
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.home-2 .home2-kalami-header-wraper .kalami-auth-actions button {
+  text-transform: capitalize;
+  font-size: 16px;
+}
+.home-2 .home2-kalami-header-wraper .kalami-auth-actions .btn-ghost {
+  color: #000;
+  background-color: #fff;
+}
+.started-free {
+  background-color: #6e43ef !important;
+  color: #fff !important;
+  text-transform: capitalize;
+}
+/* header end */
+/* why kalami start*/
+.why-kalami {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 140px;
+}
+.why-kalami .description {
+  margin: 10px;
+  margin-right: 100px;
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.why-kalami .description h2 {
+  color: #000;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 60px;
+  text-transform: capitalize;
+  width: 560px;
+  margin-bottom: 20px;
+}
+.why-kalami .description h5 {
+  color: #000;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  width: 528px;
+  margin-bottom: 40px;
+}
+.why-kalami .description .started-free {
+  margin-right: 25px;
+  text-transform: capitalize;
+}
+.why-kalami .description .download-btn {
+  border: 1px solid #000;
+  text-transform: capitalize;
+  background-color: #fff;
+  color: #000;
+}
+.why-kalami .description .download-btn svg {
+  margin-right: 5px;
+}
+.why-kalami .description .download-btn svg path {
+  stroke: #000;
+}
+/* why kalami end*/
+/* how Where works start*/
+.how-where-works {
+  background-color: #fff;
+  min-height: 645px;
+  width: 100%;
+  padding-top: 150px;
+}
+.where-you-do {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.how-where-works .where-you-do h1 {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px;
+  margin-bottom: 10px;
+}
+.how-where-works .where-you-do p {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  max-width: 676px;
+  margin-bottom: 37px;
+}
+.how-where-works .where-you-do .work-lists {
+  display: flex;
+  margin-bottom: 140px;
+}
+.how-where-works .where-you-do .work-lists li {
+  margin: 37px 15px;
+}
+.how-where-works .how-works-it .header {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-bottom: 70px;
+}
+.how-where-works .how-works-it .header .title {
+  width: 560px;
+  margin-right: 284px;
+}
+.how-where-works .how-works-it .header .title h1 {
+  color: #000;
+  font-family: Inter;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px;
+  margin-bottom: 5px;
+}
+.how-where-works .how-works-it .header .title p {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+.how-where-works .how-works-it .header .download-btn {
+  background: #6e43ef;
+  border-color: #6e43ef;
+}
+.how-where-works .how-works-it .description {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 150px;
+}
+.how-where-works .how-works-it .description .text-description {
+  margin-right: 100px;
+  width: 520px;
+}
+.how-where-works .how-works-it .description .text-description ol li {
+  border-bottom: 1px solid #dfdfdf;
+  padding: 20px 30px;
+}
+.how-where-works
+  .how-works-it
+  .description
+  .text-description
+  ol
+  li
+  .number-container {
+  position: relative;
+  margin-right: 20px;
+}
+.how-where-works .how-works-it .description .text-description ol li svg {
+  position: absolute;
+  bottom: -2px;
+  left: -8.5px;
+}
+.how-where-works .how-works-it .description .text-description ol li .text {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+/* how Where works end*/
+/* reviews start*/
+.reviews {
+  width: 100%;
+  min-height: 934px;
+  background: #f9f6ff;
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.reviews .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.reviews .header h1 {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px;
+  margin-bottom: 10px;
+}
+.reviews .header p {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  max-width: 676px;
+}
+.reviews .items {
+  min-width: 1200px;
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.reviews .items .review-item {
+  flex-basis: calc(33.3333% - 20px);
+  background: #fff;
+  min-height: 246px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+.reviews .items .review-item p {
+  width: 290px;
+  min-height: 96px;
+  margin-bottom: 30px;
+}
+.reviews .items .review-item .user-info {
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+}
+.reviews .items .review-item .user-info img {
+  margin-right: 16px;
+}
+/* reviews end*/
+/* Faq Start*/
+.faq {
+  width: 100%;
+  padding-top: 120px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.faq .header {
+  margin-bottom: 50px;
+}
+.faq .header h1 {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px;
+}
+.faq .header p {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  width: 726px;
+  max-width: 726px;
+}
+.faq .faq-accordion .accordion-container {
+  width: 1080px;
+  max-width: 1080px;
+}
+.faq .faq-accordion .accordion-container .ac {
+  border-bottom: 1px solid #eee;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+}
+.faq .faq-accordion .accordion-container .ac .ac-header {
+  border-bottom: 1px solid #eee;
+  color: #020711;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding-bottom: 10px;
+}
+.faq .faq-accordion .accordion-container .ac .ac-header .ac-text {
+  color: var(--bold-transport-text-color, #46494e);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+.faq .faq-accordion .accordion-container .ac .ac-trigger::after {
+  text-align: center;
+  width: 25px;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0%, -50%);
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  border: 1px solid #000;
+  border-radius: 50%;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Faq end*/
+/* Install extension start*/
+.install-extension-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  background: #fff;
+  padding-bottom: 80px;
+}
+.install-extension-container .install-extension {
+  width: 1110px;
+  max-width: 1110px;
+  height: auto;
+  background: #6e43ef;
+  padding-top: 82px;
+  padding-bottom: 80px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.install-extension-container .install-extension .first-curve,
+.install-extension-container .install-extension .second-curve,
+.install-extension-container .install-extension .third-curve {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+.install-extension-container .install-extension h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 55px;
+  letter-spacing: -0.22px;
+  margin-bottom: 20px;
+}
+.install-extension-container .install-extension .btn-container {
+  display: flex;
+}
+.install-extension-container .install-extension .btn-container .download-btn {
+  background: #fff;
+  color: #000;
+  margin-right: 20px;
+}
+.install-extension-container .install-extension .btn-container .download-btn svg {
+  margin-right: 5px;
+}
+.install-extension-container .install-extension .btn-container .download-btn svg path {
+  stroke: #000;
+}
+.install-extension-container .install-extension .btn-container .join-btn {
+  background: #6e43ef;
+  color: #fff;
+  border-color: #fff;
+}
+.arrow-curve {
+  position: absolute;
+  top: 40%;
+  right: 100px;
+}
+/* Install extension end*/
+/* Footer start*/
+.footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  padding-bottom: 70px
+}
+.footer-container .footer {
+  background: #fff;
+  width: 1110px;
+  max-width: 1110px;
+}
+.footer-container .footer .kalami .description {
+  width: 296px;
+  max-width: 296px;
+  margin-top: 21px;
+  margin-bottom: 17px;
+  color: #000;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.footer-container .footer .kalami .social-icons li {
+  margin-right: 16px;
+  cursor: pointer;
+}
+.quick-links h3,
+.account h3,
+.resources h3 {
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  margin-bottom: 20px;
+  margin-top: 28px;
+}
+.quick-links ul li,
+.account ul li,
+.resources ul li {
+  color: var(--dashboard-black, #050113);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  margin-bottom: 3px;
+  opacity: 0.6;
+}
+/* Footer end*/
+/*# sourceMappingURL=home-2.css.map */
