@@ -1,41 +1,101 @@
-@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-
+@import url("https://fonts.googleapis.com/css?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+/* Common Start */
 .home-2 {
   background-color: #f9f6ff;
 }
 .home-2 .video-container {
+  position: relative;
   width: 490px;
   height: 340px;
+  margin-bottom: 140px;
+}
+@media only screen and (max-width: 550px) {
+  .home-2 .video-container {
+    width: 320px;
+    height: 250px;
+    border: 1px solid #ef712a;
+  }
+  .home-2 .video-container .top-left-border-box,
+  .home-2 .video-container .right-border-box,
+  .home-2 .video-container .bottom-border-box {
+    display: none;
+  }
+} 
+.home-2 .video-container .top-left-border-box {
+  position: absolute;
+  border-radius: 300px;
+  background: #ef712a;
+  filter: blur(50px);
+  width: 300px;
+  height: 100px;
+  flex-shrink: 0;
+  left: 0px;
+  top: 4%;
+  z-index: 0;
+}
+.home-2 .video-container .right-border-box {
+  position: absolute;
+  border-radius: 150px;
+  background: #ef712a;
+  filter: blur(60px);
+  width: 60px;
+  height: 150px;
+  flex-shrink: 0;
+  right: 0px;
+  top: 30%;
+  z-index: 0;
+}
+.home-2 .video-container .bottom-border-box {
+  position: absolute;
+  border-radius: 250px;
+  background: #6e43ef;
+  filter: blur(50px);
+  width: 250px;
+  height: 60px;
+  flex-shrink: 0;
+  left: 20%;
+  bottom: 5%;
+  z-index: 0;
+}
+.home-2 .video-container .video-player-container {
+  width: 100%;
+  height: 100%;
   background: #fff;
-  border: 1px solid #6e43ef;
+  z-index: 1;
+  position: absolute;
 }
 .d-flex {
   display: flex;
 }
+.w-100 {
+  width: 100%;
+}
+/* Common End */
 /* header start */
-.home-2 .home2-kalami-header-wraper {
+.home-2 .home2-kalami-header-wrapper {
   padding: 23px 0px 0px 0px;
   height: 67px;
   display: flex;
   flex-direction: row;
   gap: 1rem;
   align-items: center;
+  margin-bottom: 100px;
   justify-content: center;
 }
 .logo-menu-container {
   display: flex;
   margin-right: 350px;
 }
-.home-2 .home2-kalami-header-wraper .logo-menu-container .kalami-logo {
+.home-2 .home2-kalami-header-wrapper .kalami-logo {
   width: 35px;
   height: 44px;
   margin-right: 80px;
 }
 .home-2
-  .home2-kalami-header-wraper
+  .home2-kalami-header-wrapper
   .logo-menu-container
-  .kalami-menu-wraper
+  .kalami-menu-wrapper
   ul {
   display: flex;
   flex-direction: row;
@@ -43,58 +103,102 @@
   align-items: center;
 }
 .home-2
-  .home2-kalami-header-wraper
+  .home2-kalami-header-wrapper
   .logo-menu-container
-  .kalami-menu-wraper
+  .kalami-menu-wrapper
   ul
   li
   a {
   font-size: 16px;
   text-transform: capitalize;
 }
-.home-2
-  .home2-kalami-header-wraper
-  .logo-menu-container
-  .kalami-menu-wraper
-  ul
-  li
-  a:hover {
+.home-2 .home2-kalami-header-wrapper .logo-menu-container .kalami-menu-wrapper ul li a:hover {
   color: black;
 }
-.home-2 .home2-kalami-header-wraper .kalami-auth-actions {
+.home-2 .home2-kalami-header-wrapper .kalami-auth-actions {
   flex-direction: row;
   gap: 0.5rem;
 }
-.home-2 .home2-kalami-header-wraper .kalami-auth-actions button {
+.home-2 .home2-kalami-header-wrapper .kalami-auth-actions button {
   text-transform: capitalize;
   font-size: 16px;
 }
-.home-2 .home2-kalami-header-wraper .kalami-auth-actions .btn-ghost {
+.home-2 .home2-kalami-header-wrapper .kalami-auth-actions .btn-ghost {
   color: #000;
   background-color: #fff;
+  margin-right: 35px;
 }
 .started-free {
   background-color: #6e43ef !important;
   color: #fff !important;
   text-transform: capitalize;
 }
+.home-2 .home2-kalami-header-wrapper .menu-bar {
+  display: none;
+  position: absolute;
+  top: 23px;
+  right: 30px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1200px) {
+  .home-2 .home2-kalami-header-wrapper .logo-menu-container {
+    margin-right: 50px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .home-2 .home2-kalami-header-wrapper .kalami-logo {
+    margin-right: 30px;
+    margin-left: 0px;
+  }
+  .home-2 .home2-kalami-header-wrapper .logo-menu-container {
+    margin-right: 0px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .home-2 .home2-kalami-header-wrapper .logo-menu-container .kalami-menu-wrapper ul,
+  .home-2 .home2-kalami-header-wrapper .kalami-auth-actions {
+    display: none;
+  }
+  .home-2 .home2-kalami-header-wrapper {
+    display: block;
+    margin-left: 50px;
+  }
+  .home-2 .home2-kalami-header-wrapper .logo-menu-container {
+    margin: 20px 0px;
+  }
+  .home-2 .home2-kalami-header-wrapper .menu-bar {
+    display: block;
+  }
+  .home-2 .margin-bottom-290 {
+    margin-bottom: 290px;
+  }
+  .home-2 .header-wrapper-responsive {
+    display: block;
+  }
+  .home-2 .home2-kalami-header-wrapper .logo-menu-container .kalami-menu-wrapper .menu-wrapper-responsive {
+    display: block;
+  }
+  .home-2 .home2-kalami-header-wrapper .kalami-auth-actions-responsive {
+    display: block;
+  }
+  
+}
 /* header end */
 /* why kalami start*/
-.why-kalami {
+.home-2 .why-kalami {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 140px;
 }
-.why-kalami .description {
+.home-2 .why-kalami .description {
   margin: 10px;
   margin-right: 100px;
-  width: 560px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 120px;
 }
-.why-kalami .description h2 {
+.home-2 .why-kalami .description h2 {
   color: #000;
   font-family: Inter;
   font-size: 48px;
@@ -102,49 +206,72 @@
   font-weight: 600;
   line-height: 60px;
   text-transform: capitalize;
-  width: 560px;
+  max-width: 560px;
+  /* width: 100%; */
   margin-bottom: 20px;
 }
-.why-kalami .description h5 {
+.home-2 .why-kalami .description h5 {
   color: #000;
   font-family: Inter;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
-  width: 528px;
+  max-width: 528px;
+  /* width: 100%; */
   margin-bottom: 40px;
 }
-.why-kalami .description .started-free {
+.home-2 .why-kalami .description .started-free {
   margin-right: 25px;
   text-transform: capitalize;
+  margin-bottom: 20px;
 }
-.why-kalami .description .download-btn {
+.home-2 .why-kalami .description .download-btn {
   border: 1px solid #000;
   text-transform: capitalize;
   background-color: #fff;
   color: #000;
 }
-.why-kalami .description .download-btn svg {
+.home-2 .why-kalami .description .download-btn svg {
   margin-right: 5px;
 }
-.why-kalami .description .download-btn svg path {
+.home-2 .why-kalami .description .download-btn svg path {
   stroke: #000;
+}
+@media only screen and (max-width: 1000px) {
+  .home-2 .why-kalami .description {
+    margin-right: 0px;
+  }
+}
+@media only screen and (max-width: 1160px) {
+  .home-2 .why-kalami .description h2,
+  .home-2 .why-kalami .description h5 {
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .home-2 .why-kalami .description .kalami-auth-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 /* why kalami end*/
 /* how Where works start*/
-.how-where-works {
+.home-2 .how-where-works {
   background-color: #fff;
   min-height: 645px;
   width: 100%;
   padding-top: 150px;
 }
-.where-you-do {
+.home-2 .where-you-do {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.how-where-works .where-you-do h1 {
+.home-2 .how-where-works .where-you-do h1 {
   color: #000;
   text-align: center;
   font-family: Inter;
@@ -152,9 +279,9 @@
   font-style: normal;
   font-weight: 600;
   line-height: 64px;
-  margin-bottom: 10px;
+  margin: 0px 20px 10px 20px;
 }
-.how-where-works .where-you-do p {
+.home-2 .how-where-works .where-you-do p {
   color: #000;
   text-align: center;
   font-family: Inter;
@@ -163,84 +290,121 @@
   font-weight: 400;
   line-height: 30px;
   max-width: 676px;
-  margin-bottom: 37px;
+  margin: 0px 20px 37px 20px;
 }
-.how-where-works .where-you-do .work-lists {
+.home-2 .how-where-works .where-you-do .work-lists {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 140px;
 }
-.how-where-works .where-you-do .work-lists li {
+.home-2 .how-where-works .where-you-do .work-lists li {
   margin: 37px 15px;
 }
-.how-where-works .how-works-it .header {
+.home-2 .how-where-works .how-works-it .header {
   display: flex;
   justify-content: center;
   align-items: end;
   margin-bottom: 70px;
 }
-.how-where-works .how-works-it .header .title {
-  width: 560px;
+.home-2 .how-where-works .how-works-it .header .title {
+  width: 100%;
+  max-width: 560px;
   margin-right: 284px;
 }
-.how-where-works .how-works-it .header .title h1 {
+.home-2 .how-where-works .how-works-it .header .title h1 {
   color: #000;
   font-family: Inter;
   font-size: 44px;
   font-style: normal;
   font-weight: 600;
   line-height: 64px;
-  margin-bottom: 5px;
+  margin: 0px 20px 5px 20px;
 }
-.how-where-works .how-works-it .header .title p {
+.home-2 .how-where-works .how-works-it .header .title p {
   color: #000;
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
+  margin: 0px 20px 5px 20px;
 }
-.how-where-works .how-works-it .header .download-btn {
+.home-2 .how-where-works .how-works-it .header .download-btn {
   background: #6e43ef;
   border-color: #6e43ef;
 }
-.how-where-works .how-works-it .description {
+.home-2 .how-where-works .how-works-it .description {
   display: flex;
   justify-content: center;
   padding-bottom: 150px;
 }
-.how-where-works .how-works-it .description .text-description {
+.home-2 .how-where-works .how-works-it .description .text-description {
   margin-right: 100px;
-  width: 520px;
+  width: 100%;
+  max-width: 520px;
 }
-.how-where-works .how-works-it .description .text-description ol li {
+.home-2 .how-where-works .how-works-it .description .text-description ol li {
   border-bottom: 1px solid #dfdfdf;
   padding: 20px 30px;
 }
-.how-where-works
-  .how-works-it
-  .description
-  .text-description
-  ol
-  li
-  .number-container {
+.home-2 .how-where-works
+.how-works-it
+.description
+.text-description
+ol
+li
+.number-container {
   position: relative;
   margin-right: 20px;
 }
-.how-where-works .how-works-it .description .text-description ol li svg {
+.home-2 .how-where-works .how-works-it .description .text-description ol li svg {
   position: absolute;
   bottom: -2px;
   left: -8.5px;
 }
-.how-where-works .how-works-it .description .text-description ol li .text {
+.home-2 .how-where-works .how-works-it .description .text-description ol li .text {
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
 }
+@media only screen and (max-width: 1200px) {
+  .home-2 .how-where-works .how-works-it .header .title {
+    margin-right: 150px;
+  }
+  .home-2 .how-where-works .how-works-it .description .text-description {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .home-2 .how-where-works {
+    min-height: 1800px;
+  }
+  .home-2 .how-where-works .how-works-it .header,
+  .home-2 .how-where-works .how-works-it .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-2 .how-where-works .how-works-it .header .title {
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+  .home-2 .how-where-works .how-works-it .header .title h1,
+  .home-2 .how-where-works .how-works-it .header .title h1 {
+    text-align: center;
+  }
+  .home-2 .how-where-works .how-works-it .text-description {
+    margin-bottom: 150px;
+  }
+  
+}
 /* how Where works end*/
 /* reviews start*/
-.reviews {
+.home-2 .reviews {
   width: 100%;
   min-height: 934px;
   background: #f9f6ff;
@@ -249,13 +413,13 @@
   align-items: center;
   flex-direction: column;
 }
-.reviews .header {
+.home-2 .reviews .header {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 40px;
 }
-.reviews .header h1 {
+.home-2 .reviews .header h1 {
   color: #000;
   text-align: center;
   font-family: Inter;
@@ -263,9 +427,9 @@
   font-style: normal;
   font-weight: 600;
   line-height: 64px;
-  margin-bottom: 10px;
+  margin: 0px 20px 10px 20px;
 }
-.reviews .header p {
+.home-2 .reviews .header p {
   color: #000;
   text-align: center;
   font-family: Inter;
@@ -274,37 +438,56 @@
   font-weight: 400;
   line-height: 30px;
   max-width: 676px;
+  margin: 0px 20px;
 }
-.reviews .items {
-  min-width: 1200px;
-  width: 1200px;
+.home-2 .reviews .items {
+  max-width: 1200px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.reviews .items .review-item {
+@media only screen and (max-width: 1250px) {
+  .home-2 .reviews .items {
+    justify-content: center;
+  }
+  .home-2 .reviews .items .review-item {
+    margin: 15px;
+  }
+}
+.home-2 .reviews .items .review-item {
   flex-basis: calc(33.3333% - 20px);
   background: #fff;
   min-height: 246px;
   margin-bottom: 30px;
   padding: 30px;
 }
-.reviews .items .review-item p {
+.home-2 .reviews .items .review-item p {
   width: 290px;
   min-height: 96px;
   margin-bottom: 30px;
 }
-.reviews .items .review-item .user-info {
+.home-2 .reviews .items .review-item .user-info {
   height: 60px;
   display: flex;
   justify-content: flex-start;
 }
-.reviews .items .review-item .user-info img {
+.home-2 .reviews .items .review-item .user-info img {
   margin-right: 16px;
+}
+@media only screen and (max-width: 400px) {
+  .home-2 .reviews .items .review-item {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 260px;
+  }
+  .home-2 .reviews .items .review-item p {
+    width: 260px;
+  }
 }
 /* reviews end*/
 /* Faq Start*/
-.faq {
+.home-2 .faq {
   width: 100%;
   padding-top: 120px;
   background: #fff;
@@ -313,10 +496,12 @@
   align-items: center;
   padding-bottom: 50px;
 }
-.faq .header {
+.home-2 .faq .header {
+  max-width: 726px;
+  width: 100%;
   margin-bottom: 50px;
 }
-.faq .header h1 {
+.home-2 .faq .header h1 {
   color: #000;
   text-align: center;
   font-family: Inter;
@@ -324,8 +509,9 @@
   font-style: normal;
   font-weight: 600;
   line-height: 64px;
+  margin: 0px 20px;
 }
-.faq .header p {
+.home-2 .faq .header p {
   color: #000;
   text-align: center;
   font-family: Inter;
@@ -333,20 +519,22 @@
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
-  width: 726px;
-  max-width: 726px;
+  margin: 0px 20px;
 }
-.faq .faq-accordion .accordion-container {
-  width: 1080px;
+.home-2 .faq .faq-accordion {
+  width: 100%;
   max-width: 1080px;
 }
-.faq .faq-accordion .accordion-container .ac {
+.home-2 .faq .faq-accordion .accordion-container {
+  margin: 0px 20px;
+}
+.home-2 .faq .faq-accordion .accordion-container .ac {
   border-bottom: 1px solid #eee;
   border-top: transparent;
   border-left: transparent;
   border-right: transparent;
 }
-.faq .faq-accordion .accordion-container .ac .ac-header {
+.home-2 .faq .faq-accordion .accordion-container .ac .ac-header {
   border-bottom: 1px solid #eee;
   color: #020711;
   font-family: Inter;
@@ -356,7 +544,7 @@
   line-height: normal;
   padding-bottom: 10px;
 }
-.faq .faq-accordion .accordion-container .ac .ac-header .ac-text {
+.home-2 .faq .faq-accordion .accordion-container .ac .ac-header .ac-text {
   color: var(--bold-transport-text-color, #46494e);
   font-family: Inter;
   font-size: 16px;
@@ -364,7 +552,7 @@
   font-weight: 400;
   line-height: 26px;
 }
-.faq .faq-accordion .accordion-container .ac .ac-trigger::after {
+.home-2 .faq .faq-accordion .accordion-container .ac .ac-trigger::after {
   text-align: center;
   width: 25px;
   -webkit-transform: translate(0, -50%);
@@ -381,15 +569,48 @@
 }
 /* Faq end*/
 /* Install extension start*/
-.install-extension-container {
+.home-2 .install-extension-container {
   width: 100%;
   display: flex;
   justify-content: center;
   padding-top: 100px;
   background: #fff;
   padding-bottom: 80px;
+  position: relative;
 }
-.install-extension-container .install-extension {
+.home-2 .install-extension-container .top-border-box {
+  position: absolute;
+  border-radius: 500px;
+  background: #ef712a;
+  filter: blur(70px);
+  width: 500px;
+  height: 130px;
+  flex-shrink: 0;
+  left: calc(50% - 600px);
+  top: 28%;
+}
+.home-2 .install-extension-container .right-border-box {
+  position: absolute;
+  border-radius: 283px;
+  background: #ef712a;
+  filter: blur(70px);
+  width: 283px;
+  height: 241px;
+  flex-shrink: 0;
+  right: calc(50% - 600px);
+  top: 25%;
+}
+.home-2 .install-extension-container .bottom-border-box {
+  position: absolute;
+  bottom: 15%;
+  width: 283px;
+  height: 130px;
+  flex-shrink: 0;
+  border-radius: 283px;
+  background: #6E43EF;
+  filter: blur(70px);
+}
+.home-2 .install-extension-container .install-extension {
   width: 1110px;
   max-width: 1110px;
   height: auto;
@@ -401,15 +622,24 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  z-index: 1;
+  margin: 0px 20px;
 }
-.install-extension-container .install-extension .first-curve,
-.install-extension-container .install-extension .second-curve,
-.install-extension-container .install-extension .third-curve {
+.home-2 .install-extension-container .install-extension .first-curve,
+.home-2 .install-extension-container .install-extension .second-curve,
+.home-2 .install-extension-container .install-extension .third-curve {
   position: absolute;
   top: -5px;
   left: -5px;
 }
-.install-extension-container .install-extension h1 {
+@media only screen and (max-width: 790px) {
+  .home-2 .install-extension-container .install-extension .first-curve,
+  .home-2 .install-extension-container .install-extension .second-curve,
+  .home-2 .install-extension-container .install-extension .third-curve {
+    display: none;
+  }
+}
+.home-2 .install-extension-container .install-extension h1 {
   color: #fff;
   text-align: center;
   font-family: Inter;
@@ -418,48 +648,80 @@
   font-weight: 600;
   line-height: 55px;
   letter-spacing: -0.22px;
-  margin-bottom: 20px;
+  margin: 0px 20px 20px 20px;
 }
-.install-extension-container .install-extension .btn-container {
+.home-2 .install-extension-container .install-extension .btn-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.install-extension-container .install-extension .btn-container .download-btn {
+.home-2 .install-extension-container .install-extension .btn-container .download-btn {
   background: #fff;
   color: #000;
   margin-right: 20px;
+  margin-bottom: 20px;
 }
-.install-extension-container .install-extension .btn-container .download-btn svg {
+.home-2 .install-extension-container
+  .install-extension
+  .btn-container
+  .download-btn
+  svg {
   margin-right: 5px;
 }
-.install-extension-container .install-extension .btn-container .download-btn svg path {
+.home-2 .install-extension-container
+  .install-extension
+  .btn-container
+  .download-btn
+  svg
+  path {
   stroke: #000;
 }
-.install-extension-container .install-extension .btn-container .join-btn {
+.home-2 .install-extension-container .install-extension .btn-container .join-btn {
   background: #6e43ef;
   color: #fff;
   border-color: #fff;
 }
-.arrow-curve {
+.home-2 .install-extension-container .install-extension .arrow-curve {
   position: absolute;
   top: 40%;
   right: 100px;
 }
+@media only screen and (max-width: 950px) {
+  .home-2 .install-extension-container .install-extension .arrow-curve {
+    right: 10px;
+  }
+}
+@media only screen and (max-width: 790px) {
+  .install-extension-container .install-extension .arrow-curve {
+    display: none;
+  }
+}
 /* Install extension end*/
 /* Footer start*/
-.footer-container {
+.home-2 .footer-container {
   width: 100%;
   display: flex;
   justify-content: center;
   background: #fff;
-  padding-bottom: 70px
+  padding-bottom: 70px;
 }
-.footer-container .footer {
+.home-2 .footer-container .footer {
+  justify-content: space-around;
   background: #fff;
-  width: 1110px;
+  width: 100%;
   max-width: 1110px;
+  display: grid;
+  width: 100%;
+  grid-auto-flow: row;
+  place-items: start;
+  row-gap: 2.5rem;
+  -moz-column-gap: 1rem;
+  column-gap: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
-.footer-container .footer .kalami .description {
-  width: 296px;
+.home-2 .footer-container .footer .kalami .description {
+  width: 100%;
   max-width: 296px;
   margin-top: 21px;
   margin-bottom: 17px;
@@ -470,13 +732,13 @@
   font-weight: 400;
   line-height: 24px;
 }
-.footer-container .footer .kalami .social-icons li {
+.home-2 .footer-container .footer .kalami .social-icons li {
   margin-right: 16px;
   cursor: pointer;
 }
-.quick-links h3,
-.account h3,
-.resources h3 {
+.home-2 .footer-container .footer .quick-links h3,
+.home-2 .footer-container .footer .account h3,
+.home-2 .footer-container .footer .resources h3 {
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
@@ -485,9 +747,9 @@
   margin-bottom: 20px;
   margin-top: 28px;
 }
-.quick-links ul li,
-.account ul li,
-.resources ul li {
+.home-2 .footer-container .footer .quick-links ul li,
+.home-2 .footer-container .footer .account ul li,
+.home-2 .footer-container .footer .resources ul li {
   color: var(--dashboard-black, #050113);
   font-family: Inter;
   font-size: 16px;
@@ -496,6 +758,12 @@
   line-height: 36px;
   margin-bottom: 3px;
   opacity: 0.6;
+}
+@media (min-width: 48rem) {
+  .home-2 .footer-container .footer {
+    grid-auto-flow: column;
+    display: grid;
+  }
 }
 /* Footer end*/
 /*# sourceMappingURL=home-2.css.map */

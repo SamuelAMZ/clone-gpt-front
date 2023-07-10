@@ -17,7 +17,7 @@ const WhyKalami = () => {
         <h5>
           Not just GitHub - we help you understand a wide array of code files.
         </h5>
-        <div className="kalami-auth-actions hidden md:flex">
+        <div className="kalami-auth-actions md:flex">
           <StartedFreeButton/>
           <ExtensionDownloadButton/>
         </div>

@@ -75,6 +75,9 @@ const InstallExtension = () => {
           </svg>
         </span>
       </div>
+      <span className="top-border-box"/>
+      <span className="right-border-box"/>
+      <span className="bottom-border-box"/>
     </div>
   );
 };
