@@ -610,6 +610,12 @@ li
   background: #6E43EF;
   filter: blur(70px);
 }
+@media only screen and (max-width: 920px) {
+  .home-2 .install-extension-container .top-border-box,
+  .home-2 .install-extension-container .right-border-box {
+    display: none;
+  }
+}
 .home-2 .install-extension-container .install-extension {
   width: 1110px;
   max-width: 1110px;
